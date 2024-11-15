@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    overflow: hidden;
+    background: #1b2227;
+
+}
+.loader{
+    height: 9px;
+    width: 9px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.circle{
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        border-radius: 50px;
+        border-style: solid;
+
+    }
+    .white{
+        border-width: 3px 3px 0 0;
+        border-color: white white transparent;
+        animation: 1s rotate-white linear infinite;
+    }
+    .red{
+        border-width: 3px 3px 0 0;
+        border-color: red red transparent;
+        animation: 1s rotate-red linear infinite;  
+    }
+    .orange{
+        border-width: 3px 3px 0 0;
+        border-color: orange orange transparent;
+        animation: 1s rotate-orange linear infinite;
+    }
+    .yellow{
+        border-width: 3px 3px 0 0;
+        border-color: yellow yellow transparent;
+        animation: 1s rotate-yellow linear infinite;
+    }
+    
+@keyframes rotate-white {
+    from {
+        transform: rotateX('45deg') rotateY('-35deg');
+    }
+    to{
+        transform: rotateX('45deg') rotateY('-35deg');
+    }
+}
+@keyframes rotate-red {
+    from {
+        transform: rotateX('45deg') rotateY('35deg');
+    }
+    to{
+        transform: rotateX('45deg') rotateY('35deg');
+    }
+}
+@keyframes rotate-orange {
+    from {
+        transform: rotateX('70deg') rotateY('0deg');
+    }
+    to{
+        transform: rotateX('70deg') rotateY('0deg');
+    }
+}
+@keyframes rotate-yellow {
+    from {
+        transform: rotateX('70deg') rotateY('360deg');
+    }
+    to{
+        transform: rotateX('70deg') rotateY('360deg');
+    }
+}
+
+</style>
+<body>
+  <div class ="loader">
+        <div class="circle white"></div>
+       
+        <div class="circle red"></div>
+        <div class="circle orange"></div>
+        <div class="circle yellow"></div>
+        
+  </div>  
+</body>
+</html>
